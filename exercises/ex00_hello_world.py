@@ -1,4 +1,4 @@
-"""My first COMP110 code"""
+"""My first COMP110 code."""
 
 __author__ = "730510525"
 
