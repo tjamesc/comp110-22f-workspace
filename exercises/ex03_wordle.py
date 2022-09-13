@@ -50,7 +50,8 @@ def emojified(guess: str, SECRET: str) -> str:
 def input_guess(input_len: int) -> str:
     """Provided an intenger argument, prompts the user to make a guess with the same number of characters as the given integer."""
     response: str = input(f"Enter a {input_len} character word: ")
-    while len(response) != input_len:
+    guessing: bool = True
+    while guessing:
         if len(response) == input_len:
             return response
         else:
