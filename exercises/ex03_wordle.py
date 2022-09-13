@@ -21,6 +21,7 @@ WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 
+
 def emojified(guess: str, SECRET: str) -> str:
     """Represents the accuracy of a guess to the secret word with colored emoji boxes."""
     assert len(guess) == len(SECRET)
@@ -71,9 +72,10 @@ def main() -> None:
         turn += 1
         if emojified(user_guess, SECRET) == GREEN_BOX * len(SECRET):
             print(f"You won in {turn - 1}/6 turns!")
-            playing = False
-        elif turn > 6 and playing:
+            return None
+        elif turn > 6:
             print("X/6 - Sorry, try again tomorrow!")
+            return None
 # the main function is like a facilitator, it guides where the code control flow goes...it starts in the main function
 # when it is called, but passes its own variables as arguments to other functions already created...first moves into
 # input_guess to receive a valid guess from the user, which is determined and created into an emoji sequence by
@@ -82,5 +84,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-
