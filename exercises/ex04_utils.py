@@ -5,6 +5,8 @@ __author__ = "730510525"
 def all(num_list: list[int], num: int) -> bool:
     """Searches a list of integers to see if all entries in the list are equal to a specified number."""
     i: int = 0
+    if len(num_list) == 0:
+        return False
     while i < len(num_list):
         if num == num_list[i]:
             i += 1
@@ -29,7 +31,7 @@ def max(input: list[int]) -> int:
 def is_equal(list_1: list[int], list_2: list[int]) -> bool:
     """Tests if two lists are exactly indentical, having the same integer at each index."""
     i: int = 0
-    if  len(list_1) != len(list_2):
+    if len(list_1) != len(list_2):
         return False
     while i < len(list_1):
         if list_1[i] != list_2[i]:
