@@ -23,7 +23,6 @@ def test_only_evens_empty() -> None:
     assert only_evens(nums) == []
 
 
-
 def test_concat() -> None:
     """Test for concat function."""
     a_list: list[int] = [111, 2, 3, -5, 0]
@@ -43,7 +42,6 @@ def test_concat_both_empty() -> None:
     a_list: list[int] = []
     b_list: list[int] = []
     assert concat(a_list, b_list) == []
-
 
 
 def test_sub() -> None:
