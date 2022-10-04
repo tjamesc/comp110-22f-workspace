@@ -60,7 +60,7 @@ def fight() -> str:
             print("\nThe autograder lands a deadly blow after that miscalculation...You lose 55HP")
             points -= 55
             if points <= 0:
-                outcome: int = "L"
+                outcome: str = "L"
                 return outcome
             valid = False
         elif attack3 == "2":
@@ -72,12 +72,12 @@ def fight() -> str:
     print(f"HP: {points}")
     while not valid:
         print("\nThe autograder attacks with SyntaxError on your while loop conditional")
-        attack3: str = input("\n1. Add a colon...it's always a missing colon error\n2. Just throw a for loop in there instead\n")
-        if attack3 == "1":
+        attack4: str = input("\n1. Add a colon...it's always a missing colon error\n2. Just throw a for loop in there instead\n")
+        if attack4 == "1":
             print("\nFor such an elegant solution, you receive a bonus 5HP")
             points += 5
             valid = True
-        elif attack3 == "2":
+        elif attack4 == "2":
             print("\nThe autograder deals a strong attack, and you lose 80HP")
             points -= 80
             valid = True
@@ -85,9 +85,9 @@ def fight() -> str:
             print("\nYour input is invalid. Try again.\n")
     print(f"HP: {points}")
     if points > 0:
-        outcome: str = "W"
+        outcome = "W"
     else:
-        outcome: str = "L"
+        outcome = "L"
     return outcome
 
 
@@ -130,7 +130,7 @@ def choc_arc(score: int) -> int:
             score -= randint(10, 20)
             baking = False
         elif baking_soda == "N":
-            print(f"Well done, well done\n")
+            print("Well done, well done\n")
             score += randint(15, 45)
             baking = False
         else:
