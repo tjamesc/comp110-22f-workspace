@@ -32,7 +32,6 @@ def favorite_color(colors: dict[str, str]) -> str:
 def count(input_list: list[str]) -> dict[str, int]:
     """Returns a dictionary with the frequency distribution for each item in the input list."""
     output: dict[str, int] = {}
-    counter: int = 1
     for item in input_list:
         if item in output:
             output[item] += 1
