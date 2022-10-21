@@ -50,8 +50,7 @@ def test_count() -> None:
     input_list: list[str] = ["wow", "wow", "woah", "wow", "woah"]
     assert count(input_list) == {"wow": 3, "woah": 2}
 
-
-def test_count_common_key() -> None:
+def test_count_one_entry() -> None:
     """Test for count function, with only one common key."""
     input_list: list[str] = ["wow", "wow", "wow", "wow", "wow"]
     assert count(input_list) == {"wow": 5}
